@@ -21,17 +21,26 @@
             margin: 10px auto;
             display: block;
         }
-
+        label {
+            display: none;
+        }
     </style>
-    <div class="demo-container">
+   <div class="demo-container">
         <div class="card-wrapper"></div>
 
         <div class="form-container active">
             <form action="">
-                <input placeholder="Card number" type="tel" name="number">
-                <input placeholder="Full name" type="text" name="name">
-                <input placeholder="MM/YY" type="tel" name="expiry">
-                <input placeholder="CVC" type="number" name="cvc">
+                <label for="number">Number</label>
+                <input placeholder="Card number" autocomplete="cc-number" type="tel" name="number">
+
+                <label for="name">name</label>
+                <input placeholder="Full name" autocomplete="cc-name" type="text" name="name">
+
+                <label for="expiry">expiry</label>
+                <input placeholder="MM/YY" autocomplete="cc-expiry" type="tel" name="expiry">
+
+                <label for="cvc">cvc</label>
+                <input placeholder="CVC" autocomplete="cc-csc" type="number" name="cvc">
             </form>
         </div>
     </div>
